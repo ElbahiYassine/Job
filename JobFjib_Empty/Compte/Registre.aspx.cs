@@ -11,8 +11,7 @@ namespace JobFjib_Empty.Compte
 {
     public partial class Registre : System.Web.UI.Page
     {
-        ADO ado = new ADO();
-
+       
         jobContextDataContext db = new jobContextDataContext();
 
         protected void Page_Load(object sender, EventArgs e)

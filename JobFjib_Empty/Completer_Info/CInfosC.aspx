@@ -135,7 +135,7 @@
                     <div class="form-group col-md-12">
                         <label for="txtProffesion">Profession</label>
                         <asp:TextBox ID="txtProffesion" runat="server" CssClass="form-control"  placeholder="Profession" value=""></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Proffesion  est Obligatoire" ForeColor="Red" ControlToValidate="txtProffesion" CssClass="valErreur"*></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Proffesion  est Obligatoire" ForeColor="Red" ControlToValidate="txtProffesion" CssClass="valErreur">*</asp:RequiredFieldValidator>
                   
                     </div>
                 </div>

@@ -175,6 +175,15 @@ namespace JobFjib_Empty {
         protected global::System.Web.UI.WebControls.TextBox txtProffesion;
         
         /// <summary>
+        /// Contrôle RequiredFieldValidator8.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        
+        /// <summary>
         /// Contrôle dlNiveau.
         /// </summary>
         /// <remarks>

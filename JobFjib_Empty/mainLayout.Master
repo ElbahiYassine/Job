@@ -30,7 +30,7 @@
                 <nav id="navbar">
                     <ul id="navbar-ul">
                         <li>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Acceuil</asp:HyperLink>
 
                         </li>
                         <li>
@@ -71,22 +71,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h3>About Us</h3>
+                    <h3>À propos de nous</h3>
                     <p>
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        <br>Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem
-                        <br> Ipsum Lorem Ipsum
+                        <b>Job_F_Jibest</b> un endroit regroupe les deux composants de marche de travail.<br />
+                        Il représente une autre porte de recrutement ou le recruteur propose des postes pour les diplômées.
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-8">
-                    <h3>Important Link</h3>
+                    <h3>Réalisé Par</h3>
                     <ul>
-                        <li><a href="#" class="flinks">Job in Marrakesh</a></li>
-                        <li><a href="#" class="flinks">Job in Maroc</a></li>
-                        <li><a href="#" class="flinks">Job in France</a></li>
-                        <li><a href="#" class="flinks">Job in Sinigal</a></li>
-
+                        <li><a href="#" class="flinks">Yassine Elbahi</a></li>
+                        <li><a href="#" class="flinks">Ayoub Taih</a></li>
+                        <li><a href="#" class="flinks">Aiman Ait Lahcen Oubella</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
