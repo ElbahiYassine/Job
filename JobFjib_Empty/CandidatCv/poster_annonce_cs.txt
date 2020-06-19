@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace JobFjib_Empty.Entreprise_PosterEmploi
+{
+    public partial class Poster_emlpoi : System.Web.UI.Page
+    {
+
+        jobContextDataContext dc = new jobContextDataContext();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            var dm = from d in dc.Domaines
+                     select d;
+            DropDownList1.DataSource = dm;
+            DropDownList1.DataTextField = "Designation";
+            DropDownList1.DataValueField = "IdDomaine";
+            DropDownList1.DataBind();
+
+
+            var ct = from d in dc.Contrats
+                     select d;
+            DropDownList2.DataSource = ct;
+            DropDownList2.DataTextField = "Designation";
+            DropDownList2.DataValueField = "IdContrat";
+            DropDownList2.DataBind();
+
+            var pr = from p in dc.Professions
+                     select p;
+            DropDownList3.DataSource = pr;
+            DropDownList3.DataTextField = "designation";
+            DropDownList3.DataValueField = "IdProfession";
+            DropDownList3.DataBind();
+
+        }
+        public void reset(Control control)
+        {
+            foreach (Control x in control.Controls)
+            {
+                if (x is TextBox)
+                {
+                    (x as TextBox).Text = String.Empty;
+                }
+
+                if (x is DropDownList)
+                {
+                    (x as DropDownList).SelectedIndex = 0;
+                }
+
+                reset(x);
+            }
+
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Emploi ep = new Emploi();
+            ep.dateCreation = DateTime.Now;
+            ep.titre = Titre_ann.Text;
+            ep.descrip = Description.Text;
+            ep.domain = DropDownList1.Text;
+            ep.ville = ville.Text;
+            ep.nbPostes = int.Parse(nbPost.Text);
+            ep.IdContrat = int.Parse(DropDownList2.SelectedValue);
+            ep.IdProfession = int.Parse(DropDownList3.SelectedValue);
+            ep.Salaire = float.Parse(salaire.Text);
+            ep.idEntreprise = int.Parse(Session["idUser"].ToString()); ;
+            ep.dateEcheance = DateTime.Parse(dateEch.Text);
+            ep.emploiEtat = true;
+            dc.Emplois.InsertOnSubmit(ep);
+            dc.SubmitChanges();
+
+            reset(this);
+            Response.Redirect("~/Home.aspx");
+        }
+
+
+    }
+}

@@ -1,0 +1,26 @@
+
+@import url(header-style.css);
+@import url(signup.css);
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Baloo 2', Montserrat;
+    margin: 0;
+    padding: 0
+}
+
+.inpts
+{
+    width:100%;
+}
+
+
+@media (min-width: 768px) {
+    .col-md-2 
+    {
+        flex: 0 0 16.666667%;
+        max-width: 100% !important ;
+    }
+}
+

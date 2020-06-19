@@ -1,0 +1,231 @@
+
+#headOfBody {
+    background: white;
+    width: 100%;
+    height: 60px;
+    padding: 20px 50px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+#toggle {
+    padding: 3px 10px;
+    font-size: 16px;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #2F76C4;
+    font-weight: bolder;
+    border-radius: 50px;
+    border: 1px solid;
+    display: none;
+}
+
+    #toggle:hover {
+        border: 1px solid #00B8EA;
+    }
+
+    #toggle img {
+        width: 22px;
+        margin-right: 5px;
+    }
+
+#linklog {
+    width: 100px;
+    line-height: 0;
+}
+
+#logo {
+    min-width: 100px;
+    width: 10%;
+    z-index: 1;
+}
+
+#navbar {
+    z-index: 2;
+}
+
+    #navbar #navbar-ul {
+        margin-bottom: 0;
+    }
+
+
+        #navbar #navbar-ul li {
+            display: inline-block;
+            margin: 0 0 0 12px;
+        }
+
+            #navbar #navbar-ul li a {
+                text-decoration: none;
+                color: black;
+            }
+
+                #navbar #navbar-ul li a:hover {
+                    color: #2F76C4;
+                }
+
+
+.btn-w {
+    border-radius: 50px;
+    padding: 3px 10px;
+    color: black;
+    font-weight: bold;
+    margin-left: 15px;
+    opacity: 0.8;
+    text-decoration: none;
+    z-index: 3;
+    font-size: 17px;
+}
+
+.btn-Up {
+    background-color: #00B8EA;
+    color: white !important;
+    font-weight: normal;
+    margin-left: 0;
+}
+
+.btn-w:hover {
+    opacity: 1;
+    color: #2F76C4;
+    text-decoration: none;
+}
+
+.btn-Up:hover {
+    color: white;
+}
+
+.moBtn {
+    display: none;
+}
+
+#liBtns {
+    margin-left: 30px;
+}
+
+#right_nv {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:760px) {
+    #headOfBody {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        transition: all 0.3s ease;
+        padding: 20px 8px;
+    }
+
+    #toggle {
+        display: flex;
+    }
+
+    #navbar {
+        width: 100%;
+        background-color: aliceblue;
+        position: fixed;
+        left: 0;
+        padding: 10px;
+        top: 60px;
+        height: 100vh;
+        clip-path: circle(0px at 100% -10%);
+        -webkit-clip-path: circle(0px at 0% -10%);
+        transition: all 0.6s ease-out;
+    }
+
+        #navbar #navbar-ul li {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #navbar.open {
+            clip-path: circle(900px at 100% -10%);
+            -webkit-clip-path: circle(900px at 100% -10%);
+        }
+
+    #btnSignUp {
+        margin: 0;
+        margin-left: 15px;
+        color: white;
+    }
+
+    .btn {
+        margin-left: 0;
+    }
+
+    .moBtn {
+        display: block;
+    }
+
+    #liBtns {
+        margin-left: 0;
+    }
+
+    .hideItem {
+        display: none;
+    }
+}
+
+
+/*Start Footer*/
+#footOfBody {
+    background-color: white;
+    padding: 20px;
+}
+
+#footOfBody ul {
+    list-style: none;
+}
+
+#footOfBody ul li a {
+}
+
+#footOfBody ul li a:hover {
+}
+
+/* Footer */
+
+#subFooter {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.fb:hover {
+    color: #2F76C4;
+}
+
+.tw:hover {
+    color: #00B8EA;
+}
+
+.ig:hover {
+    color: #DD2a7b;
+}
+
+.yt:hover {
+    color: red;
+}
+
+.flinks, .fb, .yt, .tw, .ig {
+    color: black;
+    font-size: 17px;
+}
+
+    .fb:hover, .yt:hover, .tw:hover, .ig:hover {
+        text-decoration: none;
+    }
+
+    .flinks:hover {
+        text-decoration: none;
+        color: #2F76C4;
+    }
+
+.fb i, .yt i, .tw i, .ig i
+{font-size:14px}

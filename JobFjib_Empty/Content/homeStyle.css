@@ -1,0 +1,94 @@
+﻿.section-head {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.box-Content {
+    border: 3px solid #B8D9F1;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.box-Head {
+    height: 200px;
+    position: relative;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+    .box-Head h2 {
+        color: #49ABF1;
+        background: #fff;
+        border: 1px solid #49ABF1;
+        font-size: 17px;
+        text-align: center;
+        font-weight: 700;
+        padding: 15px;
+        position: absolute;
+        left: 8%;
+        width: 80%;
+        margin: 0;
+        bottom: -25px;
+        border-radius: 50px;
+        letter-spacing: 2px;
+    }
+
+/*.box-Content:hover .box-Head h2 {
+    background: #fff;
+    transition: .9s;
+    color: #49ABF1;
+}*/
+
+.box-Infos {
+    padding: 50px 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.box-Infos p:last-child {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.btn-area {
+    display: inline-block;
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.btn
+{
+    margin:0;
+}
+
+.btn-area:hover {
+    font-weight: 700;
+}
+
+.h2-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vilsa {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-bottom {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.desc-wr {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

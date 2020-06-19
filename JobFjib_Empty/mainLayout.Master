@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mainLayout.master.cs" Inherits="JobFjib_Empty.mainLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <link href="/Content/fontBaloo.css" rel="stylesheet" />
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/style.css" rel="stylesheet" />
+    
+</head>
+<body>
+
+    
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <header id="headOfBody">
+            <a href="#" id="toggle">menu</a>
+            <asp:HyperLink ID="linklog" runat="server" NavigateUrl="~/Home.aspx"><img src="/img/logo.png" alt="Logo" id="logo"></asp:HyperLink>
+            <div id="right_nv">
+                <nav id="navbar">
+                    <ul id="navbar-ul">
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Emp/emplois.aspx">Emplois</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Profil/Candidats.aspx">Candidats</asp:HyperLink></li>
+                    </ul>
+                </nav>
+
+
+                <div  id="liBtns" runat="server">
+                    <a runat="server" href="~/Compte/Login.aspx" id="btnSignUp" class="btn-w  hideItem">Connecter</a>
+                    <a runat="server" id="btnSignIn" class="btn-w btn-Up" href="~/Compte/Registre.aspx">Inscrire</a>
+                </div>
+
+                <div id="dash" runat="server">
+                    <div class="dropdown">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle" style="font-size: 30px; margin-left: 20px"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" id="Profil" runat="server" onserverclick="Profil_ServerClick">Profil</a>
+                            <a class="dropdown-item" runat="server" id="deconnecter" onserverclick="deconnecter_ServerClick">Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </header>
+        <div style="padding-top:80px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer id="footOfBody">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h3>About Us</h3>
+                    <p>
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        <br>Lorem Ipsum Lorem Ipsum
+                        Lorem Ipsum Lorem Ipsum Lorem
+                        <br> Ipsum Lorem Ipsum
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-8">
+                    <h3>Important Link</h3>
+                    <ul>
+                        <li><a href="#" class="flinks">Job in Marrakesh</a></li>
+                        <li><a href="#" class="flinks">Job in Maroc</a></li>
+                        <li><a href="#" class="flinks">Job in France</a></li>
+                        <li><a href="#" class="flinks">Job in Sinigal</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="fb">
+                                <i class="fab fa-facebook "></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tw">
+                                <i class="fab fa-twitter"></i>
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="ig">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="yt">
+                                <i class="fab fa-youtube"></i>
+                                Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="subFooter">&copy; <%: DateTime.Now.Year %> - All rights Reserved To Jobfjib.ma</div>
+        </div>
+    </footer>
+
+    
+    </form>
+   
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/index.js"></script>
+    <script src="/Scripts/alerts.js"></script>
+    
+</body>
+</html>

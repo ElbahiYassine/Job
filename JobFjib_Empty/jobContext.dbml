@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbjob" Class="jobContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=dbjob;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbjobConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Candidat" Member="Candidat">
+    <Type Name="Candidat">
+      <Column Name="candidatId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Diplom" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nom" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="prenom" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dateNaissance" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="genre" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ville" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="experience" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cv" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="profil" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Profession" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NiveauEtude_IdNiveau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Candidat_Recrute" Member="Recrute" ThisKey="candidatId" OtherKey="Candidat_candidatId" Type="Recrute" />
+      <Association Name="NiveauEtude_Candidat" Member="NiveauEtude" ThisKey="NiveauEtude_IdNiveau" OtherKey="IdNiveau" Type="NiveauEtude" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contrat" Member="Contrat">
+    <Type Name="Contrat">
+      <Column Name="IdContrat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Contrat_Emploi" Member="Emploi" ThisKey="IdContrat" OtherKey="IdContrat" Type="Emploi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Domaine" Member="Domaine">
+    <Type Name="Domaine">
+      <Column Name="IdDomaine" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Domaine_Profession" Member="Profession" ThisKey="IdDomaine" OtherKey="IdDomaine" Type="Profession" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Emploi" Member="Emploi">
+    <Type Name="Emploi">
+      <Column Name="idEmploi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="titre" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="descrip" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dateCreation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="domain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="emploiEtat" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ville" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nbPostes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateEcheance" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IdContrat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdProfession" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Salaire" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idEntreprise" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Emploi_Recrute" Member="Recrute" ThisKey="idEmploi" OtherKey="Emploi_idEmploi" Type="Recrute" />
+      <Association Name="Contrat_Emploi" Member="Contrat" ThisKey="IdContrat" OtherKey="IdContrat" Type="Contrat" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Entreprise_Emploi" Member="Entreprise" ThisKey="idEntreprise" OtherKey="idEntreprise" Type="Entreprise" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Profession_Emploi" Member="Profession" ThisKey="IdProfession" OtherKey="IdProfession" Type="Profession" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entreprise" Member="Entreprise">
+    <Type Name="Entreprise">
+      <Column Name="idEntreprise" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nom" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ville" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="adresse" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="anneeCreation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Entreprise_Emploi" Member="Emploi" ThisKey="idEntreprise" OtherKey="idEntreprise" Type="Emploi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NiveauEtude" Member="NiveauEtude">
+    <Type Name="NiveauEtude">
+      <Column Name="IdNiveau" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="NiveauEtude_Candidat" Member="Candidat" ThisKey="IdNiveau" OtherKey="NiveauEtude_IdNiveau" Type="Candidat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profession" Member="Profession">
+    <Type Name="Profession">
+      <Column Name="IdProfession" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IdDomaine" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Profession_Emploi" Member="Emploi" ThisKey="IdProfession" OtherKey="IdProfession" Type="Emploi" />
+      <Association Name="Domaine_Profession" Member="Domaine" ThisKey="IdDomaine" OtherKey="IdDomaine" Type="Domaine" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recrute" Member="Recrute">
+    <Type Name="Recrute">
+      <Column Name="RecruteId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Candidat_candidatId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Categorie" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Emploi_idEmploi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lettreMtv" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="etatRec" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="Candidat_Recrute" Member="Candidat" ThisKey="Candidat_candidatId" OtherKey="candidatId" Type="Candidat" IsForeignKey="true" />
+      <Association Name="Emploi_Recrute" Member="Emploi" ThisKey="Emploi_idEmploi" OtherKey="idEmploi" Type="Emploi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilisateur" Member="Utilisateur">
+    <Type Name="Utilisateur">
+      <Column Name="idUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mdp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="typeUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="dernierVisite" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

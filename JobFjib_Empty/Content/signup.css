@@ -1,0 +1,58 @@
+﻿
+
+.formCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+
+.divPic {
+    margin-top: 45px;
+    margin: 0 55px;
+    width: 50%;
+    overflow: hidden;
+    position:relative;
+    right:-80px;
+}
+
+.membre {
+    font-size: 18px;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+.membre:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 770px)
+{
+    .mainCont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    .divInfo {
+        width: 100%;
+    }
+
+    .form-submit
+    {
+        width:100%;
+    }
+
+    .membre {
+        font-size: 16px;
+    }
+
+    .divPic {
+        right: 0;
+    }
+}

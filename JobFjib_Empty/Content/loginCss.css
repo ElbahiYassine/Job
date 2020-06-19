@@ -1,0 +1,198 @@
+﻿
+* {
+    box-sizing: border-box;
+    font-family: 'Baloo 2', Montserrat;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #D0E0FB;
+}
+
+.main {
+    max-width: 390px;
+    display: grid;
+    grid-template-rows: 270px 250px;
+    margin: auto;
+    
+}
+
+.head {
+    grid-row: 1/2;
+    border-radius: 10px 10px 0 0;
+    background: url(/img/back.png) 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.foot {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.frm_ {
+    margin-top: 30px;
+}
+
+.frm_grp {
+    position: relative;
+    width: 260px;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+}
+
+.ic_ {
+    font-size: 17px;
+    margin-bottom:0;
+}
+
+.inp_ {
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    background-color: #AAC2DF;
+    color: white;
+    width: 240px
+}
+
+.ch_mdp {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #4E61D6;
+    width: 90%;
+    position: relative;
+    right: -23px;
+    margin-bottom: 5px;
+}
+
+.che {
+    display: flex;
+    align-items: center;
+}
+
+.ch_mdp a {
+    transition: all 0.1s ease;
+    text-decoration: none;
+    color: #4E61D6
+}
+
+    .ch_mdp a:hover {
+        color: #005cc8;
+    }
+
+.ic_ i {
+    color: #243762;
+}
+
+.rem_ {
+    margin-right: 3px;
+}
+
+.btn_ {
+    text-align: center
+}
+
+    .btn_ input {
+        background-color: #005CC8;
+        border: none;
+        border-radius: 50px;
+        padding: 5px 12px;
+        color: white;
+        width: 40%;
+        cursor: pointer;
+        font-size: 17px;
+    }
+
+::placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    color: #fff;
+}
+
+.topHead 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+#logo {
+    width: 80px;
+}
+
+.btnBascul {
+    padding: 6px 20px;
+    background-color: white;
+    border: none;
+    color: #243762;
+    outline: none;
+    cursor: pointer;
+}
+
+.btnBascul:hover
+{
+    color:#243762;
+    text-decoration:none;
+}
+
+.footHead {
+    width: 90%;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.footHead a 
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footHead a:hover 
+{
+    text-decoration: underline;
+}
+
+.erreur 
+{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #975057;
+}
+
+.valid_erreur 
+{
+    font-size: 14px;
+    position: relative;
+    top: 15px;
+    background-color: #F8D7DA;
+    color: #975057;
+    padding: 10px;
+    font-weight: lighter;
+    list-style: none;
+    text-align: center;
+}
