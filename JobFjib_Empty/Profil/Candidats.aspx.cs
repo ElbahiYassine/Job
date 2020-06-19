@@ -21,9 +21,7 @@ namespace JobFjib_Empty.Profil
             {
                 var villes = db.Emploi.Select(m => new { m.ville }).GroupBy(x => x.ville).Select(x => x.First()).ToList();
 
-
                 dlVille.DataTextField = "ville";
-
 
                 dlVille.DataSource = villes;
                 dlVille.DataBind();

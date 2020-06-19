@@ -18,20 +18,27 @@ namespace JobFjib_Empty.Profil
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            
             id = int.Parse(Session["IdCan"].ToString());
-            ident = int.Parse(Session["idUser"].ToString());
-            var can = db.Candidat.Where(x => x.candidatId == id).Select(y=> new { y.candidatId, y.nom,y.prenom,y.photo,y.dateNaissance, y.ville,y.tel,y.experience,y.cv,y.profil,y.Profession, nv = y.NiveauEtude.designation} );
 
-            DataList1.DataSource = can;
+            if (Session["idUser"]!=null)
+            {
+                 ident = int.Parse(Session["idUser"].ToString());
+            }
+            
+                var can = db.Candidat.Where(x => x.candidatId == id).Select(y => new { y.candidatId, y.nom, y.prenom, y.photo, y.dateNaissance, y.ville, y.tel, y.experience, y.cv, y.profil, y.Profession, nv = y.NiveauEtude.designation });
 
-            DataList1.DataBind();
+                DataList1.DataSource = can;
 
-            var ep = db.Emploi.Where(y => y.idEntreprise == ident).Select(y => new { y.titre, y.idEmploi });
+                DataList1.DataBind();
+
+                var ep = db.Emploi.Where(y => y.idEntreprise == ident).Select(y => new { y.titre, y.idEmploi });
+                
+                dlEmplois.DataTextField = "titre";
+                dlEmplois.DataValueField = "idEmploi";
             dlEmplois.DataSource = ep;
-            dlEmplois.DataTextField = "titre";
-            dlEmplois.DataValueField = "idEmploi";
             dlEmplois.DataBind();
+    
+            
 
             //if (! IsPostBack)
             //{

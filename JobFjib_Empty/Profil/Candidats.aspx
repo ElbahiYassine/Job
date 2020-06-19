@@ -111,7 +111,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="items-link items-link2 f-right">
+
+
+                                                    
                                                     <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-area" CommandName="btnCan" CommandArgument='<%#Eval("candidatId")%>'>Voir Profil</asp:LinkButton>
+
+
+                                                    
                                                     <span><%#(Eval("Age"))%></span>
                                                 </div>
                                             </div>
