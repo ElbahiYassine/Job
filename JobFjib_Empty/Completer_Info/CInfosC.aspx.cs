@@ -46,7 +46,7 @@ namespace JobFjib_Empty
                 if (strPath != ".jpg" && strPath != ".jpeg" && strPath != ".gif" && strPath != ".png" )
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "ImageAlert", "ImageInvalide()", true);
-                    cd.photo = "kevin-ku-w7ZyuGYNpRQ-unsplash.jpg";
+                    cd.photo = "User.png";
                 }
                 else
                 {

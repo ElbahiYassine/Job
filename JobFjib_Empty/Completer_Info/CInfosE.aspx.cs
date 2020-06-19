@@ -28,7 +28,7 @@ namespace JobFjib_Empty
                 if (strPath != ".jpg" && strPath != ".jpeg" && strPath != ".gif" && strPath != ".png")
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "erreurAlert", "loginalert()", true);
-                    Response.Write("only image");
+                    En.logo = "User.png";
                 }
                 else
                 {
