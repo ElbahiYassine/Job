@@ -82,9 +82,10 @@
                 <div class="col-md-3 col-sm-8">
                     <h3 style="font-weight:bold;">Réalisé Par</h3>
                     <ul>
-                        <li >&emsp;<a href="#" class="flinks"></a>Kabrane Soumia</li>
+                        
                         <li>&emsp;<a href="#" class="flinks">Yassine Elbahi</a></li>
                         <li>&emsp;<a href="#" class="flinks">Ayoub Taih</a></li>
+                        <li >&emsp;<a href="#" class="flinks">Aimen Ait Lahsen oubela</a></li>
                         
                     </ul>
                 </div>
