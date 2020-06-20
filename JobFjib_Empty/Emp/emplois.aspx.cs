@@ -120,12 +120,18 @@ namespace JobFjib_Empty.Emp
                     if (cnt == true) { emps = emps.Where(c => c.IdContrat == Convert.ToInt32(dlContrat.SelectedValue)); cnt = false; }
                 }
             }
+            if (emps.ToList().Count == 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "erreurAlert", "SearchInvalide()", true);
+                Page_Load(sender, e);
+                return;
+            }
+
             repEmplois.DataSource = emps.ToList();
             repEmplois.DataBind();
             dlContrat.SelectedIndex = 0;
             dlVille.SelectedIndex = 0;
             dlDomain.SelectedIndex = 0;
-
 
         }
 

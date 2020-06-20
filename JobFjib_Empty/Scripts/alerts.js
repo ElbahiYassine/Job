@@ -1,6 +1,5 @@
 ﻿
 
-
 function loginalert() {
     Swal.fire({
         icon: 'error',
@@ -20,10 +19,10 @@ function emailExist() {
     })
 }
 
-function ImageInvalide() {
+function SearchInvalide() {
     Swal.fire({
         icon: 'error',
-        text: 'Image Invalide',
+        text: 'Pas de resultat pour cette recherche',
         width: 300,
         height: 200
     })
@@ -47,3 +46,5 @@ function PostSuc() {
         height: 200
     })
 }
+
+

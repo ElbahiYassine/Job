@@ -17,6 +17,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <div class="job-listing-area pt-50 pb-120">
         <div class="container-fluid">
@@ -166,5 +167,5 @@
         <script src="/assets/js/plugins.js"></script>
         <script src="/assets/js/main.js"></script>
 
-
+    <script src="../Scripts/alerts.js"></script>
 </asp:Content>

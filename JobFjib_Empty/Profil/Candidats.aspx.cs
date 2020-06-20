@@ -94,9 +94,7 @@ namespace JobFjib_Empty.Profil
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
-            var emps = db.Emploi.Select(x => new { dateCreation = DateTime.Now.Year - x.dateCreation.Year, profession = x.Profession.designation, x.idEmploi, x.Entreprise.logo, x.ville, x.Salaire, x.IdContrat, x.domain, Nom = x.Entreprise.nom })
-              ;
-
+            
 
             var can = from c in db.Candidat select new { c.candidatId, c.Profession, c.NiveauEtude_IdNiveau , c.nom, c.photo, c.prenom, c.ville, Age = DateTime.Now.Year -  c.dateNaissance.Date.Year };
 
@@ -128,6 +126,14 @@ namespace JobFjib_Empty.Profil
                     if (niv == true) { can = can.Where(c => c.NiveauEtude_IdNiveau == Convert.ToInt32(dlNiveau.SelectedValue)); niv = false; }
                 }
             }
+            if (can.ToList().Count == 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "erreurAlert", "SearchInvalide()", true);
+                Page_Load( sender,  e);
+                return;
+
+
+            }
             repCandidats.DataSource = can.ToList();
             repCandidats.DataBind();
 
@@ -136,12 +142,6 @@ namespace JobFjib_Empty.Profil
             dlProf.SelectedIndex = 0;
         }
 
-
-
-
-
-
-
-
+        
     }
 }
