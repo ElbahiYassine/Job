@@ -12,22 +12,22 @@
             <ItemTemplate>
 
                 <div class="form-group">
-                    <label runat="server" id="txtTitre"><%#Eval("titre") %></label>
+                    <h3><label runat="server" id="txtTitre"><%#Eval("titre") %></label></h3>
                 </div>
 
                 <div class="form-group">
-                    <label >Description</label>
-                    <textarea runat="server" class="form-control" id="txtDescrip" rows="20" style="height:auto" readonly><%#Eval("descrip")%></textarea>
+                    <label><span style="color:black; font-weight:bold; margin-right:2px;">Description:</span></label>
+                    <textarea runat="server" class="form-control" id="txtDescrip" rows="20" style="height:auto; background-color:aliceblue;" readonly><%#Eval("descrip")%></textarea>
                 </div>
 
                 <div class="form-row">
 
                     <div class="form-group col-md-6">
-                        <label>Domain: <%#Eval("domain") %> </label>
+                        <label><span style="color:black; font-weight:bold; margin-right:2px;"> Domaine:</span> <%#Eval("domain") %> </label>
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label>Nombre de Postes: <%#Eval("nbPostes") %> </label>
+                        <label><span style="color:black; font-weight:bold; margin-right:2px;">Nombre de Postes:</span> <%#Eval("nbPostes") %> </label>
                     </div>
 
                 </div>
@@ -35,11 +35,11 @@
                 <div class="form-row">
 
                     <div class="form-group col-md-6">
-                        <label>Ville: <%#Eval("ville") %> </label>
+                        <label><span style="color:black; font-weight:bold; margin-right:2px;">Ville:</span> <%#Eval("ville") %> </label>
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label>Salaire: <%#Eval("Salaire") %> </label>
+                        <label><span style="color:black; font-weight:bold; margin-right:2px;">Salaire:</span> <%#Eval("Salaire") %> </label>
                     </div>
                 </div>
 

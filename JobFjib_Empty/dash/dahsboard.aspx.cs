@@ -499,14 +499,7 @@ namespace JobFjib_Empty.dash
             db.SubmitChanges();
 
             reset(this);
-
-            mesEmplois.Visible = true;
-
-            derDemandes.Visible = false;
-            nvDemandes.Visible = false;
-            PostJob.Visible = false;
-            UpdateEmp.Visible = false;
-            modifierCompte.Visible = false;
+            Listjob_ServerClick(sender, e);
         }
         protected void btn_annuler_emp_ServerClick(object sender, EventArgs e)
         {
