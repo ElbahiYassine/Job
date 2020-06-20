@@ -1,0 +1,15 @@
+Xpath:
+
+1-\  //satellite[@nomsat = "HotBird"]/chaine
+2-\  //chaine[@datelancement >= "01/01/2001"]
+3-\  Count( //satellite[@nomsat = "NileSat"]/ chaine )
+
+
+4-\
+
+ a-\  <xs:complexType> : signifier que l element est complexe :contient d'autres elements ou possède des  attributs.
+
+b-\ <xs:sequence> : permet de décrire les elements et les attributs d un element complexe
+
+
+5) Il manque la definition  de l element <debit> : <xs:element name="debit" type = "xs:int" />

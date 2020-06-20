@@ -144,7 +144,7 @@
                  <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="txtExpe">Niveau d'etude</label>
-                            <asp:DropDownList class="form-control" ID="dlNiveau" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="dpnv" runat="server" class="form-control"></asp:DropDownList>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="txtDiplome">Diplome</label>

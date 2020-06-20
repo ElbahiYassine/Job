@@ -184,13 +184,13 @@ namespace JobFjib_Empty {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
         
         /// <summary>
-        /// Contrôle dlNiveau.
+        /// Contrôle dpnv.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dlNiveau;
+        protected global::System.Web.UI.WebControls.DropDownList dpnv;
         
         /// <summary>
         /// Contrôle txtDiplome.

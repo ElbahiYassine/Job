@@ -14,21 +14,22 @@ namespace JobFjib_Empty
     {
         jobContextDataContext db = new jobContextDataContext();
 
-        public void RemplirCombo()
-        {
-
-            var niveau = from y in db.NiveauEtude select y;
-
-
-            dlNiveau.DataSource = niveau;
-            dlNiveau.DataTextField = "designation";
-            dlNiveau.DataValueField = "IdNiveau";
-            dlNiveau.DataBind();
-        }
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            RemplirCombo();
+            if (!IsPostBack)
+            {
+                //ComboBox Niveau D'etude
+                var niveau = from y in db.NiveauEtude select y;
+
+                dpnv.DataSource = niveau;
+                dpnv.DataTextField = "designation";
+                dpnv.DataValueField = "IdNiveau";
+                dpnv.DataBind();
+                
+            }
+            
         }
 
         protected void btnComp_Click(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace JobFjib_Empty
                 }
                 else
                 {
-                    if (taille>200000)
+                    if (taille>200000 || taille < 1 )
                     {
                        Response.Write("La taille de Cv Invalide !!");
                     }
@@ -102,14 +103,15 @@ namespace JobFjib_Empty
             cd.experience = int.Parse(txtExpe.Text);
             cd.tel = txtPhone.Text;
             cd.Profession = txtProffesion.Text;
-            cd.NiveauEtude_IdNiveau = int.Parse(dlNiveau.SelectedValue);
+            cd.NiveauEtude_IdNiveau = int.Parse(dpnv.SelectedValue);
             cd.Diplom = txtDiplome.Text;
-
 
             db.SubmitChanges();
             Response.Redirect("~/Home.aspx");
-    
+
         }
+
+      
     }
 }
 
