@@ -236,7 +236,7 @@ namespace JobFjib_Empty.dash
                 txttitre.Text = emps.titre;
                 txtvilleemp.Text = emps.ville;
                 txtnbpost.Text = emps.nbPostes.ToString();
-                txtdateechan.Text = emps.dateEcheance.ToString();
+                txtdateechan.Text = emps.dateEcheance.ToString("yyyy-MM-dd");
                 txtsalaire.Text = emps.Salaire.ToString();
                 txtDescriptionemp.Text = emps.descrip;
 
@@ -284,7 +284,7 @@ namespace JobFjib_Empty.dash
             ep.dateCreation = DateTime.Now;
             ep.titre = Titre_ann.Text;
             ep.descrip = Description.Text;
-            ep.domain = DropDownList1.Text;
+            ep.domain = DropDownList1.SelectedItem.ToString();
             ep.ville = ville.Text;
             ep.nbPostes = int.Parse(nbPost.Text);
             ep.IdContrat = int.Parse(DropDownList2.SelectedValue);
@@ -298,13 +298,7 @@ namespace JobFjib_Empty.dash
 
             reset(this);
 
-            mesEmplois.Visible = true;
-
-            derDemandes.Visible = false;
-            nvDemandes.Visible = false;
-            PostJob.Visible = false;
-            UpdateEmp.Visible = false;
-            modifierCompte.Visible = false;
+            Listjob_ServerClick(sender,e);
         }
 
         //Candidat

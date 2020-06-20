@@ -25,7 +25,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <header id="headOfBody">
             <a href="#" id="toggle">menu</a>
-            <asp:HyperLink ID="linklog" runat="server" NavigateUrl="~/Home.aspx"><img src="/img/logo.png" alt="Logo" id="logo"></asp:HyperLink>
+            <asp:HyperLink ID="linklog" runat="server" NavigateUrl="~/Home.aspx"><img src="/img/ss.png" id="lg" class="logo2"/><img src="/img/logo.png" alt="Logo" id="logo" class="logo2"></asp:HyperLink>
             <div id="right_nv">
                 <nav id="navbar">
                     <ul id="navbar-ul">
@@ -65,48 +65,51 @@
         <div style="padding-top:80px">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <br />
+            <br />
         </div>
 
-        <footer id="footOfBody">
+        <footer id="footOfBody" style="background-color: rgba(183,216,241,0.5);">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h3>À propos de nous</h3>
+                    <h3 style="font-weight:bold;">À Propos de nous</h3>
                     <p>
-                        <b>Job_F_Jib</b> est un endroit regroupe les deux composants de marche de travail.<br />
+                        &emsp;<b>Job_F_Jib</b> est un endroit regroupe les deux composants de marche de travail.<br />
                         Il représente une autre porte de recrutement ou le recruteur propose des postes pour les diplômées.
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-8">
-                    <h3>Réalisé Par</h3>
+                    <h3 style="font-weight:bold;">Réalisé Par</h3>
                     <ul>
-                        <li><a href="#" class="flinks">Yassine Elbahi</a></li>
-                        <li><a href="#" class="flinks">Ayoub Taih</a></li>
-                        <li><a href="#" class="flinks">Aiman Ait Lahcen Oubella</a></li>
+                        <li >&emsp;<a href="#" class="flinks"></a>Kabrane Soumia</li>
+                        <li>&emsp;<a href="#" class="flinks">Yassine Elbahi</a></li>
+                        <li>&emsp;<a href="#" class="flinks">Ayoub Taih</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h3>Social Media</h3>
+                    <h3 style="font-weight:bold;">Social Media</h3>
                     <ul>
-                        <li>
+                        <li>&emsp;
                             <a href="#" class="fb">
                                 <i class="fab fa-facebook "></i>
                                 Facebook
                             </a>
                         </li>
-                        <li>
+                        <li>&emsp;
                             <a href="#" class="tw">
                                 <i class="fab fa-twitter"></i>
                                 Twitter
                             </a>
                         </li>
-                        <li>
+                        <li>&emsp;
                             <a href="#" class="ig">
                                 <i class="fab fa-instagram"></i>
                                 Instagram
                             </a>
                         </li>
-                        <li>
+                        <li>&emsp;
                             <a href="#" class="yt">
                                 <i class="fab fa-youtube"></i>
                                 Youtube
@@ -115,7 +118,8 @@
                     </ul>
                 </div>
             </div>
-            <div id="subFooter">&copy; <%: DateTime.Now.Year %> - All rights Reserved To Jobfjib.ma</div>
+            <br />
+            <div id="subFooter">&copy; <%: DateTime.Now.Year %> -  Tous droits sont réservés a Jobfjib.ma</div>
         </div>
     </footer>
 

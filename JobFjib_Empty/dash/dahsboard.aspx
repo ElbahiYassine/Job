@@ -129,7 +129,7 @@
                                               <td><%#Eval("Lenom") %> </td>
                                               <td><%#Eval("Ladate") %></td>
                                               <td>
-                                                 <asp:LinkButton ID="LinkButton2" runat="server" CommandName="acceptrecrt" CommandArgument='<%#Eval("RidEmp")%>'>LinkButton</asp:LinkButton>
+                                                 <asp:LinkButton ID="LinkButton2" runat="server" CommandName="acceptrecrt" CommandArgument='<%#Eval("RidEmp")%>'>Accepter</asp:LinkButton>
 
                                               </td>
                                           </tr>
@@ -422,7 +422,7 @@
 
 
                                     <div class="btn-check-log text-center">
-                                        <asp:Button ID="Button1" class="btn-check-login ripple-effect" causesvalidation="true" validationgroup="2" runat="server" Text="Poster" OnClick="Button1_Click" />
+                                        <asp:Button ID="Button1" class="btn-check-login ripple-effect" causesvalidation="true" validationgroup="2" runat="server" Text="Poster" OnClick="Button1_Click" BackColor="AliceBlue" />
                                     </div>
                                     <br />
                                 </div>
@@ -518,7 +518,7 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="txtdateechan">Date Echeance</label>
-                                <asp:TextBox ID="txtdateechan" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtdateechan" TextMode="Date" runat="server" CssClass="form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="La Date de Emploi est Obligatoire" ValidationGroup="5" ControlToValidate="txtdateechan" CssClass="valErreur" />
                             </div>
                             <div class="form-group col-md-6">
@@ -700,7 +700,7 @@
                                              <a class="btn-check-login ripple-effect" causesvalidation="true" validationgroup="4" runat="server" id="ModifierEnt" onserverclick="ModifierEnt_ServerClick">Modifier</a>
                                         </div>
                                          <div class="form-group col-md-6">
-                                             <a class="btn-check-login ripple-effect" runat="server" id="annulerEnt" onserverclick="annulerEnt_ServerClick">Annuler</a>
+                                             <a class="btn-check-login ripple-effect" runat="server" id="annulerEnt" onserverclick="Listjob_ServerClick">Annuler</a>
                                         </div>
                                     </div>
 

@@ -18,6 +18,8 @@
             <div class="form-group col-md-6">
                 <label for="logoUp">LOGO</label>
                 <asp:FileUpload ID="logoUp" class="form-control-file form-control" runat="server" />
+               <%--<asp:RequiredFieldValidator  ID="RequiredFieldValidator12" runat="server" ForeColor="Red" ControlToValidate="logoUp" ErrorMessage="choisir un logo!">*</asp:RequiredFieldValidator> --%>
+
             </div>
 
         </div>

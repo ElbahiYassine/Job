@@ -19,7 +19,7 @@ namespace JobFjib_Empty.Profil
 
             if (!IsPostBack)
             {
-                var villes = db.Emploi.Select(m => new { m.ville }).GroupBy(x => x.ville).Select(x => x.First()).ToList();
+                var villes = db.Candidat.Select(m => new { m.ville }).GroupBy(x => x.ville).Select(x => x.First()).ToList();
 
                 dlVille.DataTextField = "ville";
 
@@ -47,7 +47,7 @@ namespace JobFjib_Empty.Profil
 
                 dlNiveau.Items.Insert(0, new ListItem("Tout les Niveaux", "0"));
 
-                var can = from c in db.Candidat select new { c.candidatId, c.Profession, c.nom, c.photo, c.prenom, c.ville, Age = c.dateNaissance };
+                var can = from c in db.Candidat select new { c.candidatId, c.Profession, c.nom, c.photo, c.prenom, c.ville, Age = DateTime.Now.Year - c.dateNaissance.Year };
 
                 repCandidats.DataSource = can;
                 repCandidats.DataBind();

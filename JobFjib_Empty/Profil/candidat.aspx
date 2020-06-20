@@ -24,6 +24,9 @@
                 width:100%;
             }
         }
+        .prof{
+              box-shadow: 0px 22px 57px 0px rgba(34, 41, 72, 0.05);
+        }
     </style>
 
 </asp:Content>
@@ -38,7 +41,7 @@
 
                             <div class="col-12">
                                 <!-- job single -->
-                                <div class="single-job-items mb-50">
+                                <div class="prof single-job-items mb-50">
                                     <div class="job-items">
 
                                         <div class="company-img company-img-details">
@@ -53,7 +56,7 @@
                                             </a>
                                             <ul class="inf-can">
                                                 <li><i class="fas fa-map-marker-alt"></i><%#Eval("ville")%></li>
-                                                <li>Niveau d'etude: <%#Eval("nv")%></li>
+                                                <li>Niveau d'etude: <%#Eval("nvv")%></li>
                                                 <li>Profession: <%#Eval("profession")%></li>
                                                 <li>Experience: <%#Eval("experience")%></li>
                                                 <li><a href="<%#Eval("cv")%>">Voir C.V</a></li>

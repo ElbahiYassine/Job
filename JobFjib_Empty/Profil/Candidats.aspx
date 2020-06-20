@@ -75,7 +75,8 @@
                             <div class="select-job-items2">
                                 <asp:DropDownList ID="dlNiveau" runat="server" name="select" OnSelectedIndexChanged="dlNiveau_SelectedIndexChanged" AutoPostBack="false" ></asp:DropDownList>
                             </div>
-
+                            <br />
+        
                         </div>
 
                         <div class="single-listing pt-50">

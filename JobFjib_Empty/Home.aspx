@@ -96,7 +96,15 @@
     background: #fff;
     margin-bottom: 30px;
 }
-
+        p{
+            font-size:20px;
+        }
+        p a{
+            color:blue;
+        }
+        h2{
+            font-family: "Times New Roman", Times, serif;
+        }
     </style>
 
 
@@ -104,14 +112,15 @@
     <section id="overview">
 
         <div class="divInfo">
-            <h2 class="titre">Vous êtes à la recherche d'un travail?</h2>
-            <h2 class="titre">Ou Vous avez besoin des Employées ?</h2>
+            <h2 class="titre">Vous êtes à <span style="color:red;font-weight:bold;"> recherche</span> d'un travail?</h2>
+            <h2 style="text-align:center;">Ou</h2>
+            <h2 class="titre"> Vous avez<span style="color:red;font-weight:bold;"> besoin des Employées ?</span></h2>
 
-            <p>Vous êtes au bon endroit.JOB-FJIB est votre intermédiaire.</p>
+            <p>Vous êtes au bon endroit.<span style="color:red;font-weight:bold;">JOB-FJIB </span>est votre intermédiaire.</p>
 
-            <p>Candidat ? Vous cherchez un emploi ? <a href="#derEmplois">Postuler</a> maintenant des dizaines d'offres vous attends</p>
+            <p>Candidat ? <a href="#derEmplois">Postuler</a> maintenant des dizaines d'offres vous attends</p>
 
-            <p>Entreprise ? <a href="#secPost">content</a> des Annonces de travail ou tout simplement <a href="#derCandidat">choisir</a> vous salaries à partir du catalogue.</p>
+            <p>Entreprise ? <a href="#secPost">Poster</a> vos Annonces de travail ou <a href="#derCandidat">choisir</a> vous salariés à partir du catalogue.</p>
         </div>
 
 

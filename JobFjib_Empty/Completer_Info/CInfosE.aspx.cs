@@ -28,7 +28,7 @@ namespace JobFjib_Empty
                 if (strPath != ".jpg" && strPath != ".jpeg" && strPath != ".gif" && strPath != ".png")
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "erreurAlert", "loginalert()", true);
-                    En.logo = "User.png";
+                    En.logo = "entreprise2.jpg";
                 }
                 else
                 {
@@ -38,7 +38,10 @@ namespace JobFjib_Empty
                 }
 
             }
-
+            else
+            {
+                En.logo ="entreprise2.jpg";
+            }
             En.nom = txtNom.Value;
             En.ville = txtVille.Value;
             En.adresse = txtAdresse.Value;

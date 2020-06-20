@@ -248,8 +248,12 @@
     <Content Include="img\back.png" />
     <Content Include="img\headright.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\logo22.png" />
+    <Content Include="img\ss.png" />
     <Content Include="img\topBack.png" />
     <Content Include="img\undraw_posting_photo.svg" />
+    <Content Include="UserImages\utilinc.png" />
+    <Content Include="Logo_Entreprise\entreprise2.jpg" />
     <Content Include="Profil\candidat.aspx" />
     <Content Include="Profil\Candidats.aspx" />
     <Content Include="Scripts\alerts.js" />
@@ -432,7 +436,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\fonts\my-icons-collection\" />
     <Folder Include="CandidatCv\" />
-    <Folder Include="Logo_Entreprise\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -465,7 +468,7 @@
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>

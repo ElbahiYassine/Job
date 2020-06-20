@@ -157,13 +157,13 @@ namespace JobFjib_Empty {
         protected global::System.Web.UI.WebControls.FileUpload cvUP;
         
         /// <summary>
-        /// Contrôle RequiredFieldValidator4.
+        /// Contrôle RequiredFieldValidator12.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator12;
         
         /// <summary>
         /// Contrôle txtProffesion.

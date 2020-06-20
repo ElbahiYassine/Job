@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
    <section id="Info-Etape1">
-        <ul class="nav nav-pills nav-justified" role="tablist">
+        <ul class="nav nav-pills nav-justified" role="tablist" style="cursor:pointer;">
             <li class="nav-item">
                 <a class="nav-link active"  role="tab" aria-controls="Etape1" aria-selected="true" onclick="slide('Info-Etape1', 'Info-Etape2')">Etape 1</a>
             </li>
@@ -23,7 +23,8 @@
                         <div class="form-group">
                             <label for="photoUp">Photo</label>
                             <asp:FileUpload ID="photoUp" class="form-control-file" runat="server" />
-                        </div>
+<%--                             <asp:RequiredFieldValidator  ID="RequiredFieldValidator11" runat="server" ForeColor="Red" ControlToValidate="photoUp" ErrorMessage="choisir un fichier!">*</asp:RequiredFieldValidator> 
+                        --%></div>
                 </div>
 
                     <div class="form-row">
@@ -84,7 +85,7 @@
                    </div>
 
                      <div class="btn-check-log text-center">
-                        <a class="btn-check-login ripple-effect" onclick="slide('Info-Etape2', 'Info-Etape1')">SUIVANT</a>
+                        <a class="form-control" onclick="slide('Info-Etape2', 'Info-Etape1')" style="background-color:aliceblue; cursor:pointer;">SUIVANT</a>
                      </div>
                  
                </div>
@@ -94,7 +95,7 @@
 
 
 
-    <section id="Info-Etape2">
+    <section id="Info-Etape2" style="cursor:pointer;">
 
         <ul class="nav nav-pills nav-justified" role="tablist">
             <li class="nav-item">
@@ -125,8 +126,8 @@
                         <div class="custom-file">
                             <asp:fileupload runat="server" class="custom-file-input" ID="cvUP" aria-describedby="inputGroupFileAddon03"></asp:fileupload>
                             <label class="custom-file-label" for="inputGroupFile03">Choisir Votre C.V</label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"  ForeColor="Red" ControlToValidate="cvUP" CssClass="valErreur">*</asp:RequiredFieldValidator>
-                   
+                           <asp:RequiredFieldValidator  ID="RequiredFieldValidator12" runat="server" ForeColor="Red" ControlToValidate="cvUP" ErrorMessage="Merci d importer votre cv!">*</asp:RequiredFieldValidator> 
+
                         </div>
                     </div>
                 </div>

@@ -24,10 +24,31 @@ namespace JobFjib_Empty.Profil
             {
                  ident = int.Parse(Session["idUser"].ToString());
             }
-            
-                var can = db.Candidat.Where(x => x.candidatId == id).Select(y => new { y.candidatId, y.nom, y.prenom, y.photo, y.dateNaissance, y.ville, y.tel, y.experience, y.cv, y.profil, y.Profession, nv = y.NiveauEtude.designation });
+            var joinedResult = from y in db.Candidat
+                               join n in db.NiveauEtude 
+                               on y.NiveauEtude_IdNiveau equals n.IdNiveau
+                               where y.candidatId==id
+                               select new
+                               {
+                                   y.candidatId,
+                                   y.nom,
+                                   y.prenom,
+                                   y.photo,
+                                   y.dateNaissance,
+                                   y.ville,
+                                   y.tel,
+                                   y.experience,
+                                   y.cv,
+                                   y.profil,
+                                   y.Profession,
+                                   nvv =n.designation
+                               };
 
-                DataList1.DataSource = can;
+
+
+
+           
+              DataList1.DataSource = joinedResult;
 
                 DataList1.DataBind();
 
@@ -37,7 +58,6 @@ namespace JobFjib_Empty.Profil
                 dlEmplois.DataValueField = "idEmploi";
             dlEmplois.DataSource = ep;
             dlEmplois.DataBind();
-    
             
 
             //if (! IsPostBack)

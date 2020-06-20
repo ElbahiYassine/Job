@@ -46,7 +46,7 @@ namespace JobFjib_Empty
                 if (strPath != ".jpg" && strPath != ".jpeg" && strPath != ".gif" && strPath != ".png" )
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "ImageAlert", "ImageInvalide()", true);
-                    cd.photo = "User.png";
+                    cd.photo = "utilinc.png";
                 }
                 else
                 {
@@ -54,6 +54,10 @@ namespace JobFjib_Empty
                     photoUp.SaveAs(Server.MapPath("/UserImages/") + filup);
                     cd.photo =  filup;
                 }
+            }
+            else
+            {
+                cd.photo = "utilinc.png";
             }
             int taille = cvUP.PostedFile.ContentLength;
             if (cvUP.PostedFile != null)
