@@ -173,7 +173,8 @@ namespace JobFjib_Empty.dash
                         txtProf.Text = candidat.Profession;
                         txtExp.Text = candidat.experience.ToString();
                         txtProfil.Text = candidat.profil;
-                        txtDiplome.Text = candidat.Diplom;
+                        diptxt.Text = candidat.Diplom;
+                        dlNiveau.SelectedValue =candidat.NiveauEtude_IdNiveau.ToString();
 
                     }
 
@@ -433,7 +434,7 @@ namespace JobFjib_Empty.dash
             cd.tel = txtTel.Text;
             cd.Profession = txtProf.Text;
             cd.NiveauEtude_IdNiveau = int.Parse(dlNiveau.SelectedValue);
-            cd.Diplom = txtDiplome.Text;
+            cd.Diplom = diptxt.Text;
 
             db.SubmitChanges();
 

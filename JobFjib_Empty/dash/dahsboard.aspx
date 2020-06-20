@@ -607,9 +607,8 @@
 
                                          <div class="form-group col-md-6">
                                             <label for="txtDiplome">Diplome</label>
-
-                                            <asp:TextBox ID="txtDiplome"  runat="server" class="form-control" ></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="A" runat="server" ErrorMessage="Votre Diplome  est Obligatoire" ForeColor="Red" ControlToValidate="txtDiplome" CssClass="valErreur">*</asp:RequiredFieldValidator>
+                                             <asp:TextBox ID="diptxt" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="A" runat="server" ErrorMessage="Votre Diplome  est Obligatoire" ForeColor="Red" ControlToValidate="diptxt" CssClass="valErreur">*</asp:RequiredFieldValidator>
                                         </div>
 
                                     </div>

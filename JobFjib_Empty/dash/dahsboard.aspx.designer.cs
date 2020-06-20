@@ -589,13 +589,13 @@ namespace JobFjib_Empty.dash {
         protected global::System.Web.UI.WebControls.DropDownList dlNiveau;
         
         /// <summary>
-        /// Contrôle txtDiplome.
+        /// Contrôle diptxt.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiplome;
+        protected global::System.Web.UI.WebControls.TextBox diptxt;
         
         /// <summary>
         /// Contrôle RequiredFieldValidator6.
